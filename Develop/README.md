@@ -1,6 +1,9 @@
-![Static Badge](https://img.shields.io/badge/LICENSE-BSD_2_Clause_"Simplified"_License-purple)
-  # ll
+![Static Badge](https://img.shields.io/badge/LICENSE-BSD_3_Clause_"New"_or_"Revised"_License-purple)
+
+  # Matt's Project
+
   ## Table of Contents
+
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -8,19 +11,33 @@
   - [Tests](#tests)
   - [License](#license)
   - [Questions](#questions)
+
   ## Description
-  ll
+
+  cool project
+
   ## Installation
-  ll
+
+  install
+
   ## Usage
-  ll
+
+  use
+
   ## Contributing
-  ll
+
+  contribute
+
   ## Tests
-  ll
+
+  test
+
   ## License 
-  BSD 2 Clause "Simplified" License
+
+  BSD 3 Clause "New" or "Revised" License
+
   ## Questions
+  
   Contact me here with any questions
-  [Github](https://github.com/ll)
-  Email: ss
+  - [Github](https://github.com/hm)
+  - Email: hm

@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
-const questions = inquirer.prompt([ {
+const questions = [ {
     type: 'input',
     name: 'title',
     message: 'What is the project title?',
@@ -101,11 +101,7 @@ const questions = inquirer.prompt([ {
     name: 'email',
     message: 'What is your email address?',
     response: 'string',
-} ])
-    .then((response) => 
-        writeToFile('README.md', response)
-    );
-
+} ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, response) {
@@ -116,7 +112,11 @@ function writeToFile(fileName, response) {
 
 // TODO: Create a function to initialize app
 function init() {
-
+    inquirer
+        .prompt(questions)
+        .then((response) => 
+        writeToFile('README.md', response)
+        );
 }
 
 // Function call to initialize app
