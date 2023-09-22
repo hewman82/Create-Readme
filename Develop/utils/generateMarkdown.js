@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Create a license badge based on which license is selected
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if(license) {
@@ -8,24 +8,24 @@ function renderLicenseBadge(license) {
   else { return ''; }
 }
 
-// TODO: Create a function that returns the license link
+// Create license section link in table of contents
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license) { return `- [License](#license)` } else { return '' }
 }
 
-// TODO: Create a function that returns the license section of README
+// Create the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if(license) { return `## License 
   ${license}` } else { return '' }
 }
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(response) {
-  return `${renderLicenseBadge(response.license)}
+// Generate markdown template for README with data created by inquirer prompts
+function generateMarkdown(data) {
+  return `${renderLicenseBadge(data.license)}
 
-  # ${response.title}
+  # ${data.title}
 
   ## Table of Contents
 
@@ -34,36 +34,37 @@ function generateMarkdown(response) {
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [Tests](#tests)
-  ${renderLicenseLink(response.license)}
+  ${renderLicenseLink(data.license)}
   - [Questions](#questions)
 
   ## Description
 
-  ${response.description}
+  ${data.description}
 
   ## Installation
 
-  ${response.installation}
+  ${data.installation}
 
   ## Usage
   
-  ${response.usage}
+  ${data.usage}
   
   ## Contributing
   
-  ${response.contributing}
+  ${data.contributing}
   
   ## Tests
-  ${response.tests}
+  ${data.tests}
   
-  ${renderLicenseSection(response.license)}
+  ${renderLicenseSection(data.license)}
   
   ## Questions
   
   Contact me here with any questions
-  - [Github](https://github.com/${response.github})
-  - Email: ${response.email}
+  - [Github](https://github.com/${data.github})
+  - Email: ${data.email}
 `;
 }
 
+// Export generateMarkdown function
 module.exports = generateMarkdown;

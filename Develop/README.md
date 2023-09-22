@@ -1,8 +1,8 @@
-![Static Badge](https://img.shields.io/badge/LICENSE-BSD_3_Clause_"New"_or_"Revised"_License-purple)
+![Static Badge](https://img.shields.io/badge/LICENSE-GNU_General_Public_License_v3.0-purple)
 
-  # Matt's Project
+  # README Generator
 
-  ## Table of Contents
+  Table of Contents
 
   - [Description](#description)
   - [Installation](#installation)
@@ -14,30 +14,28 @@
 
   ## Description
 
-  cool project
+  i 
 
   ## Installation
 
-  install
+  am
 
   ## Usage
-
-  use
-
+  
+  almost
+  
   ## Contributing
-
-  contribute
-
+  
+  done
+  
   ## Tests
-
-  test
-
+  so 
+  
   ## License 
-
-  BSD 3 Clause "New" or "Revised" License
-
+  GNU General Public License v3.0
+  
   ## Questions
   
   Contact me here with any questions
-  - [Github](https://github.com/hm)
-  - Email: hm
+  - [Github](https://github.com/im)
+  - Email: happy
