@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
-const questions = [ {
+const questions = inquirer.prompt([ {
     type: 'input',
     name: 'title',
     message: 'What is the project title?',
@@ -26,12 +26,12 @@ const questions = [ {
     response: 'string',
 }, {
     type: 'input',
-    name: 'contribution',
+    name: 'contributing',
     message: 'Provide contribution guidelines',
     response: 'string',
 }, {
     type: 'input',
-    name: 'test',
+    name: 'tests',
     message: 'Provide test instructions',
     response: 'string',
 }, {
@@ -52,11 +52,11 @@ const questions = [ {
         short: 'MIT License',
     }, {
         name: 'BSD 2-Clause "Simplified" License',
-        value: 'BSD 2-Clause "Simplified" License',
+        value: 'BSD 2 Clause "Simplified" License',
         short: 'BSD 2-Clause "Simplified" License',
     }, {
         name: 'BSD 3-Clause "New" or "Revised" License',
-        value: 'BSD 3-Clause "New" or "Revised" License',
+        value: 'BSD 3 Clause "New" or "Revised" License',
         short: 'BSD 3-Clause "New" or "Revised" License',
     }, {
         name: 'Boost Software License 1.0',
@@ -93,19 +93,31 @@ const questions = [ {
     } ]
 }, {
     type: 'input',
+    name: 'github',
     message: 'What is your github username?',
     response: 'string',
 }, {
     type: 'input',
+    name: 'email',
     message: 'What is your email address?',
     response: 'string',
-} ];
+} ])
+    .then((response) => 
+        writeToFile('README.md', response)
+    );
+
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, response) {
+    fs.writeFile(fileName, generateMarkdown(response), (err) => 
+        err ? console.error(err) : console.log('Success!')
+    );
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+
+}
 
 // Function call to initialize app
 init();

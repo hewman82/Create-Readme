@@ -1,41 +1,51 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if(license){
+    let convertLic = `${license}`.replaceAll(/ /g, "_");
+    return `![Static Badge](https://img.shields.io/badge/LICENSE-${convertLic}-purple)`}
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if(license){return `- [License](#license)`} else {return''}
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if(license){return `## License 
+  ${license}`} else {return ''}
+}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-  ## Description
-  ${data.description}
+function generateMarkdown(response) {
+  return `${renderLicenseBadge(response.license)}
+  # ${response.title}
   ## Table of Contents
-  [Description](#Description)
-  [Installation](#Installation)
-  [Usage](#Usage)
-  [Contributing](#Contributing)
-  [Tests](#Tests)
-  [License](#License)
-  [Questions](#Questions)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  ${renderLicenseLink(response.license)}
+  - [Questions](#questions)
+  ## Description
+  ${response.description}
   ## Installation
-  ${data.installation}
+  ${response.installation}
   ## Usage
-  ${data.usage}
+  ${response.usage}
   ## Contributing
-  ${data.contributing}
+  ${response.contributing}
   ## Tests
-  ${data.tests}
-  ## License
-  ${licensetext}
+  ${response.tests}
+  ${renderLicenseSection(response.license)}
   ## Questions
-  [Github]('https://github.com/${data.github}')
-  [Email]('https://gmail.com')
+  Contact me here with any questions
+  [Github](https://github.com/${response.github})
+  Email: ${response.email}
 `;
 }
 
