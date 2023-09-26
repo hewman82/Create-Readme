@@ -24,6 +24,8 @@
   
   The application is initialized by running 'node index' in the terminal. Then you can answer the prompts with information about your project and a readme file will be generated with your input.
   
+  Demo video: https://drive.google.com/file/d/16S5pLKn5fgYd9e5B2d4sHwrCa_FAUsap/view
+  
   ## Contributing
   
   If you have any suggestions on how to improve the application, you can open an issue on the github page with the tag 'suggestion' or fork the project, create feature branch, commit your changes, push to your branch, and open a pull request.
